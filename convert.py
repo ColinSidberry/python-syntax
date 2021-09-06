@@ -16,7 +16,20 @@ def convert_temp(unit_in, unit_out, temp):
     """
 
     # YOUR CODE HERE
+    # (32°F − 32) × 5/9 = 0°C
+    # (32°C × 9/5) + 32 = 89.6°F
 
+    if (unit_in != "f" and unit_in != "c"):
+        return (f"Invalid unit {unit_in}")
+    elif (unit_out != "f" and unit_out != "c"):
+        return (f"Invalid unit {unit_out}")
+
+    if (unit_in == "f" and unit_out == "c"):
+        return (temp - 32) * 5/9
+    elif (unit_in == "c" and unit_out == "f"):
+        return  (temp * 9/5) + 32
+    else:
+        return temp
 
 print("c", "f", 0, convert_temp("c", "f", 0), "should be 32.0")
 print("f", "c", 212, convert_temp("f", "c", 212), "should be 100.0")
