@@ -13,6 +13,16 @@ def count_up(start, stop):
     """
 
     # YOUR CODE HERE
+    # set variable count = start
+    # while loop count <= stop
+    # increment count
+    # print count
 
+    count = start
+
+    while count <= stop:
+        print(count)
+        count += 1
+    
 
 count_up(5, 7)        
